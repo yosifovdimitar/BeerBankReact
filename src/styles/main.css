@@ -1,0 +1,449 @@
+html {
+    font-family: 'Heebo', sans-serif;
+    height: 100%;
+    background: #f8f8f8;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    height: 100%;
+}
+
+.hide-item {
+    display: none !important;
+}
+
+.show-item {
+    display: unset;
+}
+
+.main-wrapper {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    height: 100%;
+}
+
+.nav-menu-container {
+    display: grid;
+    grid-gap: 1vmax;
+    grid-template-columns: 1fr min-content min-content;
+    padding-right: 1.5vmax;
+    padding-top: 0.7vmax;
+    padding-bottom: 0.5vmax;
+    background: #f79400;
+}
+
+.search-container {
+    background: #f79400;
+    border-bottom: #f7ddc4;
+    border-bottom-style: inset;
+    z-index: 0;
+    display: grid;
+    grid-template-rows: repeat(6, min-content);
+    grid-gap: 0.3vmin;
+}
+
+.the-beer-bank-title {
+    grid-row: 3;
+    justify-self: center;
+    color: white;
+    font-size: 4.2vmin;
+    font-weight: bold;
+}
+
+.the-beer-bank-subtitle {
+    grid-row: 4;
+    justify-self: center;
+    color: white;
+    font-size: 2vmin;
+    padding-bottom: 0.2vmax;
+}
+
+.bb-search-bar-input {
+    grid-row: 5;
+    justify-self: center;
+    font-size: 1.2vmax;
+    text-align: start;
+    width: 33vw;
+    height: 3.7vmax;
+    padding-left: 0.7vmin;
+    border-width: 0.4vmin;
+    border-style: solid;
+    border-color: #f7ddc4;
+}
+
+.bb-advanced-search {
+    grid-row: 6;
+    color: white;
+    justify-self: center;
+    align-self: center;
+    font-size: 1.4vmax;
+    cursor: pointer;
+    user-select: none;
+    padding-top: 1.5vmax;
+    padding-bottom: 0.8vmax;
+}
+
+.bb-clear-values-container {
+    justify-self: center;
+    align-self: center;
+    grid-row: 8;
+    color: white;
+    font-size: 1.4vmax;
+    padding: 0.5vmax;
+    cursor: pointer;
+    user-select: none;
+}
+
+.page-content-wrapper {
+    overflow-y: auto;
+}
+
+.list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 5vh;
+    padding: 12vh 20vw;
+}
+
+.bb-element-container {
+    height: 100%;
+    display: grid;
+    grid-row: 1/3;
+    grid-column: 1/3;
+    grid-template-rows: 0.7fr min-content min-content;
+    align-content: center;
+    padding-left: 1vmax;
+    padding-right: 2vmax;
+}
+
+.bb-item-element {
+    background: white;
+    box-shadow: 0px 0px 3vmin 0px #a9a9a98a;
+    border-radius: 0.7vmin;
+    height: 20vmax;
+    width: 18.1vmax;
+    margin: 0.7vmax;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+}
+
+.bb-item-element:hover {
+    box-shadow: 0px 0px 3vmin 0px #848484;
+}
+
+.bb-element-favorite-button {
+    grid-row: 1/3;
+    grid-column: 2;
+    font-size: 1.6vmax;
+    cursor: pointer;
+    user-select: none;
+    justify-self: self-end;
+}
+
+.bb-svg-star {
+    width: 2.7vmax;
+    height: 3vmax;
+    stroke: black;
+    fill: white;
+    padding-top: 1vmax;
+    stroke-width: 2%;
+}
+
+.bb-svg-star:hover {
+    stroke: #f79400;
+    cursor: pointer;
+    user-select: none;
+}
+
+.bb-svg-star-selected {
+    width: 2.7vmax;
+    height: 5vmax;
+    stroke: #f79400;
+    fill: #f79400;
+    stroke-width: 2%;
+}
+
+.list-element-photo-container {
+    grid-row: 1;
+    justify-self: center;
+}
+
+.svg-photo-display {
+    height: 12vmax;;
+    width: 100%;
+}
+
+.bb-element-name {
+    grid-row: 2;
+    color: #f79302;
+    font-size: 1.2vmax;
+    font-weight: bold;
+    justify-self: center;
+    text-align: center;
+}
+
+.bb-element-tagline {
+    grid-row: 3;
+    color: #b9bbc2;
+    font-size: 1vmax;
+    justify-self: center;
+    text-align: center;
+}
+
+.bb-detailed-display-shadow {
+    position: absolute;
+    background: #00000042;
+    width: 100%;
+    height: 100%;
+    top:0%;
+}
+
+.bb-detailed-display-container {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    position: absolute;
+    background: white;
+    box-shadow: 0px 0px 3vmin 0px #848484;
+    border-radius: 0.5vmin;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 64vw;
+    top: 5%;
+    bottom: 0%;
+}
+
+.bb-detailed-display-close {
+    cursor: pointer;
+    user-select: none;
+    padding-right: 1vmin;
+    font-size: 1.7vmax;
+    color: #b9bbc2;
+    justify-self: end;
+}
+
+.bb-item-details-container {
+    display: grid;
+    grid-gap: 2vmin;
+    grid-row: 2;
+    grid-template-columns: 0.3fr 1fr;
+    grid-template-rows: repeat(6, min-content);
+    color: #b9bbc2;
+    padding-right: 2vmin;
+}
+
+.bb-detailed-content {
+    overflow-y: auto;
+}
+
+.bb-detailed-item-name {
+    grid-column: 2;
+    grid-row: 1;
+    color: #f79400;
+    font-weight: bold;
+    font-size: 1.8vmax;
+}
+
+.bb-detailed-item-tagline {
+    grid-row: 2;
+    font-size: 1.3vmax;
+}
+
+.bb-detailed-separator-line {
+    grid-row: 3;
+    background: #b33e9a;
+    width: 18%;
+    height: 1vmin;
+}
+
+.bb-item-specifics {
+    display: grid;
+    grid-row: 4;
+    grid-template-columns: repeat(3, min-content);
+    grid-gap: 1vw;
+    font-weight: bold;
+    font-size: 1.3vmax;
+}
+
+.bb-item-ibu-container {
+    display: grid;
+    grid-column: 1;
+    color: #7a7a7a;
+}
+
+.bb-detailed-advanced-params {
+    grid-row: 1;
+}
+
+.bb-detailed-item-ibu {
+    grid-row: 1;
+    float: right;
+    font-weight: normal;
+    color: #b9bbc2;
+}
+
+.bb-item-abv-container {
+    display: grid;
+    grid-column: 2;
+    color: #7a7a7a;
+}
+
+.bb-detailed-item-abv {
+    grid-row: 1;
+    float: right;
+    font-weight: normal;
+    color: #b9bbc2;
+}
+
+.bb-detailed-item-ebc {
+    grid-row: 1;
+    float: right;
+    font-weight: normal;
+    color: #b9bbc2;
+}
+
+.bb-item-ebc-container {
+    display: grid;
+    grid-column: 3;
+    color: #7a7a7a;
+}
+
+.bb-detailed-item-description {
+    grid-row: 5;
+    font-size: 1.4vmax;
+}
+
+.detailed-display-photo-container {
+    grid-column: 1;
+    grid-row: 1/10;
+    height: 52vmin;
+}
+
+.detailed-svg-photo-display {
+    height: 100%;
+    width: 100%;
+}
+
+.bb-best-served-with {
+    grid-row: 6;
+    color: #7a7a7a;
+    font-weight: bold;
+    font-size: 1.5vmax;
+}
+
+.bb-detailed-item-food-pairing {
+    grid-column: 2;
+    grid-row: 7;
+    padding-left: 6vmin;
+    font-size: 1.4vmax;
+}
+
+.bb-you-might-also-like {
+    color: #f79400;
+    font-weight: bold;
+    font-size: 2.5vmin;
+    padding-left: 3vmin;
+}
+
+.bb-item-recommendations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bb-advanced-inputs-container {
+    grid-row: 7;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bb-input-container {
+    padding-left: 1vmin;
+    padding-right: 1vmin;
+    display: grid;
+}
+
+.bb-advanced-input-text {
+    color: white;
+    font-size: 1.3vmax;
+    text-align: center;
+}
+
+.favorites-text {
+    color: white;
+    font-weight: bold;
+    font-size: 4.2vmin;
+    text-align: center;
+    background: #f79400;
+    padding-top: 2vmax;
+    padding-bottom: 3vmax;
+}
+
+.no-favorites-text {
+    color: white;
+    font-weight: bold;
+    font-size: 2.2vmin;
+    text-align: center;
+    background: #f79400;
+    padding-top: 2vmax;
+    padding-bottom: 3vmax;
+}
+
+#root {
+    height: 100%;
+}
+
+#home-button {
+    grid-column: 2;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.2vmax;
+}
+
+#favorite-button {
+    grid-column: 3;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.2vmax;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .the-beer-bank-title {
+        font-size: 6.2vmin;
+    }
+
+    .the-beer-bank-subtitle{
+        font-size: 4.5vmin;
+    }
+
+    .bb-you-might-also-like {
+        font-size: 3.5vmin;
+    }
+
+    .bb-advanced-search {
+        font-size: 1.6vmax;
+    }
+
+    .bb-clear-values-container {
+        font-size: 1.6vmax;
+    }
+
+    #home-button {
+        font-size: 1.8vmax;
+    }
+
+    #favorite-button {
+        font-size: 1.8vmax;
+    }
+}

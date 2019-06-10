@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 
 import App from "./components/App";
 
+import "./styles/main.css";
+
 
 class Index extends React.Component {
 

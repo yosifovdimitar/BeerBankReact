@@ -13,6 +13,16 @@ body {
     height: 100%;
 }
 
+input {
+    justify-self: center;
+    font-size: 1.6vmax;
+    width: 9vmax;
+    height: 3vh;
+    border-width: 0.4vmin;
+    border-style: solid;
+    border-color: #f7ddc4;
+}
+
 .hide-item {
     display: none !important;
 }
@@ -66,7 +76,7 @@ body {
 .bb-search-bar-input {
     grid-row: 5;
     justify-self: center;
-    font-size: 1.2vmax;
+    font-size: 1.7vmax;
     text-align: start;
     width: 33vw;
     height: 3.7vmax;
